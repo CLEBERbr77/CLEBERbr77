@@ -16,22 +16,31 @@ HTML:
 </html>
 ```
 
-CSS (style.css):
-```css
+
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
 }
 
-#game-area {
-  width: 400px;
-  height: 400px;
-  border: 1px solid black;
+h1 {
+    margin-bottom: 20px;
 }
-```
+
+.game-container {
+    position: relative;
+}
+
+canvas {
+    background-color: #000;
+    border: 1px solid #000;
+}
+
 
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
